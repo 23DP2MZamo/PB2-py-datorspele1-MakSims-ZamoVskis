@@ -9,9 +9,9 @@ from time import sleep
 print("Sveicinam jūs spēlē HangMan")
 print("-------------------------------------------")
 
-wordDictionary = ["four", "house", "sunflower", "latvia", "Python", "hello", "music", "Heart", "espada", "algoritm", "programmmer", "RVT", "Riga", "Potato", "Apple", "Android", "Windows", "Linux", "Computer"]
+wordDictionary = ["four", "house", "sunflower", "latvia", "python", "hello", "music", "heart", "algoritm", "programmer", "rvt", "riga", "potato", "apple", "android", "windows", "linux", "computer"]
 
-### Choose a random word
+# Izvelējās jebkuru vārdu
 randomWord = random.choice(wordDictionary)
 
 for x in randomWord:
@@ -95,25 +95,51 @@ while(amount_of_times_wrong != 6 and current_letters_right != length_of_word_to_
   print("\nLetters guessed so far: ")
   for letter in current_letters_guessed:
     print(letter, end=" ")
-  ### Prompt user for input
+  # Lai user varētu ievādīt burtu
   letterGuessed = input("\nGuess a letter: ")
-  ### User is right
+  # User uzminēja burtu
   if(randomWord[current_guess_index] == letterGuessed):
     print_hangman(amount_of_times_wrong)
-    ### Print word
+    # Raksta  vardu
     current_guess_index+=1
     current_letters_guessed.append(letterGuessed)
     current_letters_right = printWord(current_letters_guessed)
     printLines()
-  ### User was wrong af
+  # User izdarīja daudz kļūdus
   else:
     amount_of_times_wrong+=1
     current_letters_guessed.append(letterGuessed)
-    ### Update the drawing
+    # atjauno bildi
     print_hangman(amount_of_times_wrong)
-    ### Print word
+    # Raksta vardu
     current_letters_right = printWord(current_letters_guessed)
     printLines()
 
+if amount_of_times_wrong == 6:
+  print("""
+  ▓██   ██▓ ▒█████   █    ██     ██▓     ▒█████    ██████ ▄▄▄█████▓ ▐██▌ 
+   ▒██  ██▒▒██▒  ██▒ ██  ▓██▒   ▓██▒    ▒██▒  ██▒▒██    ▒ ▓  ██▒ ▓▒ ▐██▌ 
+    ▒██ ██░▒██░  ██▒▓██  ▒██░   ▒██░    ▒██░  ██▒░ ▓██▄   ▒ ▓██░ ▒░ ▐██▌ 
+    ░ ▐██▓░▒██   ██░▓▓█  ░██░   ▒██░    ▒██   ██░  ▒   ██▒░ ▓██▓ ░  ▓██▒ 
+    ░ ██▒▓░░ ████▓▒░▒▒█████▓    ░██████▒░ ████▓▒░▒██████▒▒  ▒██▒ ░  ▒▄▄  
+     ██▒▒▒ ░ ▒░▒░▒░ ░▒▓▒ ▒ ▒    ░ ▒░▓  ░░ ▒░▒░▒░ ▒ ▒▓▒ ▒ ░  ▒ ░░    ░▀▀▒ 
+   ▓██ ░▒░   ░ ▒ ▒░ ░░▒░ ░ ░    ░ ░ ▒  ░  ░ ▒ ▒░ ░ ░▒  ░ ░    ░     ░  ░ 
+   ▒ ▒ ░░  ░ ░ ░ ▒   ░░░ ░ ░      ░ ░   ░ ░ ░ ▒  ░  ░  ░    ░          ░ 
+   ░ ░         ░ ░     ░            ░  ░    ░ ░        ░            ░    
+   ░ ░                                                                   """)
+  sleep(2)
+  print("Vards bija - ", randomWord)
 
-print("GAME OVER, Thanks for playing ;D!!")
+else:
+  print("""
+   __   __  _______  __   __    _     _  ___   __    _  __  
+  |  | |  ||       ||  | |  |  | | _ | ||   | |  |  | ||  | 
+  |  |_|  ||   _   ||  | |  |  | || || ||   | |   |_| ||  | 
+  |       ||  | |  ||  |_|  |  |       ||   | |       ||  | 
+  |_     _||  |_|  ||       |  |       ||   | |  _    ||__| 
+    |   |  |       ||       |  |   _   ||   | | | |   | __  
+    |___|  |_______||_______|  |__| |__||___| |_|  |__||__| """)
+
+
+
+print("Paldies, par spēlēšanu manu spēli!")
