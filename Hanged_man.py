@@ -7,10 +7,11 @@ from os import system
 from time import sleep
 
 print("Sveicinam jūs spēlē HangMan")
-print("-------------------------------------------")
+print("Rakstiet pa vienu burtu, lai uzminētu vārdu, visi vārdi ir angļu valodā")
+print("-----------------------------------------------------------------------")
 
 # vārdu bibliotēka
-wordDictionary = ["four", "house", "sunflower", "latvia", "python", "hello", "music", "heart", "algoritm", "programmer", "rvt", "riga", "potato", "apple", "android", "windows", "linux", "computer"]
+wordDictionary = ["four", "house", "flower", "latvia", "python", "hello", "music", "heart", "rvt", "riga", "potato", "apple", "android", "windows", "linux", "computer"]
 
 # Izvelējās jebkuru vārdu
 randomWord = random.choice(wordDictionary)
@@ -22,47 +23,75 @@ for x in randomWord:
 def print_hangman(wrong):
   if(wrong == 0):
     system("cls")
-    print("\n+---+")
-    print("    |")
-    print("    |")
-    print("    |")
+    print()
+    print()
+    print()
+    print()
     print("   ===")
+
   elif(wrong == 1):
     system("cls")
-    print("\n+---+")
-    print("O   |")
-    print("    |")
+    print()
+    print()
     print("    |")
     print("   ===")
   elif(wrong == 2):
     system("cls")
-    print("\n+---+")
-    print("O   |")
-    print("|   |")
+    print()
+    print()
+    print("    |")
+    print("    |")
+    print("   ===")        
+  elif(wrong == 3):
+    system("cls")
+    print()
+    print("    |")
+    print("    |")
     print("    |")
     print("   ===")
-  elif(wrong == 3):
+  elif(wrong == 4):
+    system("cls")
+    print("\n+---+")
+    print("    |")
+    print("    |")
+    print("    |")
+    print("   ===")
+  elif(wrong == 5):
+    system("cls")
+    print("\n+---+")
+    print("O   |")
+    print("    |")
+    print("    |")
+    print("   ===")
+  elif(wrong == 6):
+    system("cls")
+    print("\n+---+")
+    print(" O  |")
+    print(" |  |")
+    print("    |")
+    print("   ===")
+  elif(wrong == 7):
     system("cls")
     print("\n+---+")
     print(" O  |")
     print("/|  |")
     print("    |")
     print("   ===")
-  elif(wrong == 4):
+  elif(wrong == 8):
     system("cls")
     print("\n+---+")
     print(" O  |")
     print("/|\ |")
     print("    |")
     print("   ===")
-  elif(wrong == 5):
+  elif(wrong == 9):
     system("cls")
     print("\n+---+")
-    print(" O  |")
-    print("/|\ |")
-    print("/   |")
-    print("   ===")
-  elif(wrong == 6):
+    print(" O   |")
+    print("/|\  |")
+    print("/    |")
+    print("    ===")
+  elif(wrong == 10):
     system("cls")
     print("\n+---+")
     print(" O   |")
@@ -72,8 +101,8 @@ def print_hangman(wrong):
 
 # Ja ujzminēja 
 def printWord(guessedLetters):
-  counter=0
-  rightLetters=0
+  counter = 0
+  rightLetters = 0
   for char in randomWord:
     if(char in guessedLetters):
       print(randomWord[counter], end=" ")
@@ -95,12 +124,12 @@ current_guess_index = 0
 current_letters_guessed = []
 current_letters_right = 0
 
-while(amount_of_times_wrong != 6 and current_letters_right != length_of_word_to_guess):
-  print("\nLetters guessed so far: ")
+while(amount_of_times_wrong != 10 and current_letters_right != length_of_word_to_guess):
+  print("\nTik tālu uzminētie burti: ")
   for letter in current_letters_guessed:
     print(letter, end=" ")
   # Lai user varētu ievādīt burtu
-  letterGuessed = input("\nGuess a letter: ")
+  letterGuessed = input("\nUzmini burtu: ")
   # User uzminēja burtu
   if(randomWord[current_guess_index] == letterGuessed):
     print_hangman(amount_of_times_wrong)
@@ -118,8 +147,8 @@ while(amount_of_times_wrong != 6 and current_letters_right != length_of_word_to_
     # Raksta vardu
     current_letters_right = printWord(current_letters_guessed)
     printLines()
-
-if amount_of_times_wrong == 6:
+# Programma analīzē
+if amount_of_times_wrong == 10:
   print("""
   ▓██   ██▓ ▒█████   █    ██     ██▓     ▒█████    ██████ ▄▄▄█████▓ ▐██▌ 
    ▒██  ██▒▒██▒  ██▒ ██  ▓██▒   ▓██▒    ▒██▒  ██▒▒██    ▒ ▓  ██▒ ▓▒ ▐██▌ 
