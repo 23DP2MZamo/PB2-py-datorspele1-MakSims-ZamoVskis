@@ -8,7 +8,7 @@ from time import sleep
 
 print("Sveicinam jūs spēlē HangMan")
 print("Rakstiet pa vienu burtu, lai uzminētu vārdu, visi vārdi ir angļu valodā")
-print("-----------------------------------------------------------------------")
+print("------------------------------------------------------------------------")
 
 # vārdu bibliotēka
 wordDictionary = ["four", "house", "flower", "latvia", "python", "hello", "music", "heart", "rvt", "riga", "potato", "apple", "android", "windows", "linux", "computer"]
@@ -98,7 +98,125 @@ def print_hangman(wrong):
     print("/|\  |")
     print("/ \  |")
     print("    ===")
-
+  elif(wrong == 11):
+    system("cls")
+    print("\n+---+")
+    print(" O   |")
+    print("/|\  |")
+    print("/ \  |")
+    print("    ===")
+  elif(wrong == 12):
+    system("cls")
+    print("\n+---+")
+    print(" O   |")
+    print("/|\  |")
+    print("/ \  |")
+    print("    ===")
+  elif(wrong == 13):
+    system("cls")
+    print("\n+---+")
+    print(" O   |")
+    print("/|\  |")
+    print("/ \  |")
+    print("    ===")
+  elif(wrong == 14):
+    system("cls")
+    print("\n+---+")
+    print(" O   |")
+    print("/|\  |")
+    print("/ \  |")
+    print("    ===")
+  elif(wrong == 15):
+    system("cls")
+    print("\n+---+")
+    print(" O   |")
+    print("/|\  |")
+    print("/ \  |")
+    print("    ===")
+  elif(wrong == 16):
+    system("cls")
+    print("\n+---+")
+    print(" O   |")
+    print("/|\  |")
+    print("/ \  |")
+    print("    ===")
+  elif(wrong == 17):
+    system("cls")
+    print("\n+---+")
+    print(" O   |")
+    print("/|\  |")
+    print("/ \  |")
+    print("    ===")
+  elif(wrong == 18):
+    system("cls")
+    print("\n+---+")
+    print(" O   |")
+    print("/|\  |")
+    print("/ \  |")
+    print("    ===")
+  elif(wrong == 19):
+    system("cls")
+    print("\n+---+")
+    print(" O   |")
+    print("/|\  |")
+    print("/ \  |")
+    print("    ===")
+  elif(wrong == 20):
+    system("cls")
+    print("\n+---+")
+    print(" O   |")
+    print("/|\  |")
+    print("/ \  |")
+    print("    ===")
+  elif(wrong == 21):
+    system("cls")
+    print("\n+---+")
+    print(" O   |")
+    print("/|\  |")
+    print("/ \  |")
+    print("    ===")
+  elif(wrong == 22):
+    system("cls")
+    print("\n+---+")
+    print(" O   |")
+    print("/|\  |")
+    print("/ \  |")
+    print("    ===")
+  elif(wrong == 23):
+    system("cls")
+    print("\n+---+")
+    print(" O   |")
+    print("/|\  |")
+    print("/ \  |")
+    print("    ===")
+  elif(wrong == 24):
+    system("cls")
+    print("\n+---+")
+    print(" O   |")
+    print("/|\  |")
+    print("/ \  |")
+    print("    ===")
+  elif(wrong == 25):
+    system("cls")
+    print("\n+---+")
+    print(" O   |")
+    print("/|\  |")
+    print("/ \  |")
+    print("    ===")
+  elif(wrong == 26):
+    system("cls")
+    print("\n+---+")
+    print(" O   |")
+    print("/|\  |")
+    print("/ \  |")
+    print("    ===")
+  elif(wrong == 27):
+    system("cls")
+    print("\n+---+")
+    print(" O   |")
+    print("/|\  |")
+    print("/ \  |")
+    print("    ===")
 # Ja ujzminēja 
 def printWord(guessedLetters):
   counter = 0
@@ -132,7 +250,6 @@ while(amount_of_times_wrong != 10 and current_letters_right != length_of_word_to
   letterGuessed = input("\nUzmini burtu: ")
   # User uzminēja burtu
   if(randomWord[current_guess_index] == letterGuessed):
-    print_hangman(amount_of_times_wrong)
     # Raksta  vardu
     current_guess_index+=1
     current_letters_guessed.append(letterGuessed)
@@ -148,21 +265,20 @@ while(amount_of_times_wrong != 10 and current_letters_right != length_of_word_to
     current_letters_right = printWord(current_letters_guessed)
     printLines()
 # Programma analīzē
-if amount_of_times_wrong == 10:
-  print("""
-  ▓██   ██▓ ▒█████   █    ██     ██▓     ▒█████    ██████ ▄▄▄█████▓ ▐██▌ 
-   ▒██  ██▒▒██▒  ██▒ ██  ▓██▒   ▓██▒    ▒██▒  ██▒▒██    ▒ ▓  ██▒ ▓▒ ▐██▌ 
-    ▒██ ██░▒██░  ██▒▓██  ▒██░   ▒██░    ▒██░  ██▒░ ▓██▄   ▒ ▓██░ ▒░ ▐██▌ 
-    ░ ▐██▓░▒██   ██░▓▓█  ░██░   ▒██░    ▒██   ██░  ▒   ██▒░ ▓██▓ ░  ▓██▒ 
-    ░ ██▒▓░░ ████▓▒░▒▒█████▓    ░██████▒░ ████▓▒░▒██████▒▒  ▒██▒ ░  ▒▄▄  
-     ██▒▒▒ ░ ▒░▒░▒░ ░▒▓▒ ▒ ▒    ░ ▒░▓  ░░ ▒░▒░▒░ ▒ ▒▓▒ ▒ ░  ▒ ░░    ░▀▀▒ 
-   ▓██ ░▒░   ░ ▒ ▒░ ░░▒░ ░ ░    ░ ░ ▒  ░  ░ ▒ ▒░ ░ ░▒  ░ ░    ░     ░  ░ 
-   ▒ ▒ ░░  ░ ░ ░ ▒   ░░░ ░ ░      ░ ░   ░ ░ ░ ▒  ░  ░  ░    ░          ░ 
-   ░ ░         ░ ░     ░            ░  ░    ░ ░        ░            ░    
-   ░ ░                                                                   """)
-  sleep(2)
-  print("Vards bija - ", randomWord)
+if amount_of_times_wrong == 27:
+   print("""
+    ▓██   ██▓ ▒█████   █    ██     ██▓     ▒█████    ██████ ▄▄▄█████▓ ▐██▌ 
+     ▒██  ██▒▒██▒  ██▒ ██  ▓██▒   ▓██▒    ▒██▒  ██▒▒██    ▒ ▓  ██▒ ▓▒ ▐██▌ 
+      ▒██ ██░▒██░  ██▒▓██  ▒██░   ▒██░    ▒██░  ██▒░ ▓██▄   ▒ ▓██░ ▒░ ▐██▌ 
+      ░ ▐██▓░▒██   ██░▓▓█  ░██░   ▒██░    ▒██   ██░  ▒   ██▒░ ▓██▓ ░  ▓██▒ 
+      ░ ██▒▓░░ ████▓▒░▒▒█████▓    ░██████▒░ ████▓▒░▒██████▒▒  ▒██▒ ░  ▒▄▄  
+       ██▒▒▒ ░ ▒░▒░▒░ ░▒▓▒ ▒ ▒    ░ ▒░▓  ░░ ▒░▒░▒░ ▒ ▒▓▒ ▒ ░  ▒ ░░    ░▀▀▒ 
+     ▓██ ░▒░   ░ ▒ ▒░ ░░▒░ ░ ░    ░ ░ ▒  ░  ░ ▒ ▒░ ░ ░▒  ░ ░    ░     ░  ░ 
+     ▒ ▒ ░░  ░ ░ ░ ▒   ░░░ ░ ░      ░ ░   ░ ░ ░ ▒  ░  ░  ░    ░          ░ 
+     ░ ░         ░ ░     ░            ░  ░    ░ ░        ░            ░    
+     ░ ░                                                                   """)
 
+   print("Vards bija - ", randomWord)
 else:
   print("""
    __   __  _______  __   __    _     _  ___   __    _  __  
@@ -172,7 +288,3 @@ else:
   |_     _||  |_|  ||       |  |       ||   | |  _    ||__| 
     |   |  |       ||       |  |   _   ||   | | | |   | __  
     |___|  |_______||_______|  |__| |__||___| |_|  |__||__| """)
-
-
-
-print("Paldies, par spēlēšanu manu spēli!")
