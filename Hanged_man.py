@@ -105,118 +105,6 @@ def print_hangman(wrong):
     print("/|\  |")
     print("/ \  |")
     print("    ===")
-  elif(wrong == 12):
-    system("cls")
-    print("\n+---+")
-    print(" O   |")
-    print("/|\  |")
-    print("/ \  |")
-    print("    ===")
-  elif(wrong == 13):
-    system("cls")
-    print("\n+---+")
-    print(" O   |")
-    print("/|\  |")
-    print("/ \  |")
-    print("    ===")
-  elif(wrong == 14):
-    system("cls")
-    print("\n+---+")
-    print(" O   |")
-    print("/|\  |")
-    print("/ \  |")
-    print("    ===")
-  elif(wrong == 15):
-    system("cls")
-    print("\n+---+")
-    print(" O   |")
-    print("/|\  |")
-    print("/ \  |")
-    print("    ===")
-  elif(wrong == 16):
-    system("cls")
-    print("\n+---+")
-    print(" O   |")
-    print("/|\  |")
-    print("/ \  |")
-    print("    ===")
-  elif(wrong == 17):
-    system("cls")
-    print("\n+---+")
-    print(" O   |")
-    print("/|\  |")
-    print("/ \  |")
-    print("    ===")
-  elif(wrong == 18):
-    system("cls")
-    print("\n+---+")
-    print(" O   |")
-    print("/|\  |")
-    print("/ \  |")
-    print("    ===")
-  elif(wrong == 19):
-    system("cls")
-    print("\n+---+")
-    print(" O   |")
-    print("/|\  |")
-    print("/ \  |")
-    print("    ===")
-  elif(wrong == 20):
-    system("cls")
-    print("\n+---+")
-    print(" O   |")
-    print("/|\  |")
-    print("/ \  |")
-    print("    ===")
-  elif(wrong == 21):
-    system("cls")
-    print("\n+---+")
-    print(" O   |")
-    print("/|\  |")
-    print("/ \  |")
-    print("    ===")
-  elif(wrong == 22):
-    system("cls")
-    print("\n+---+")
-    print(" O   |")
-    print("/|\  |")
-    print("/ \  |")
-    print("    ===")
-  elif(wrong == 23):
-    system("cls")
-    print("\n+---+")
-    print(" O   |")
-    print("/|\  |")
-    print("/ \  |")
-    print("    ===")
-  elif(wrong == 24):
-    system("cls")
-    print("\n+---+")
-    print(" O   |")
-    print("/|\  |")
-    print("/ \  |")
-    print("    ===")
-  elif(wrong == 25):
-    system("cls")
-    print("\n+---+")
-    print(" O   |")
-    print("/|\  |")
-    print("/ \  |")
-    print("    ===")
-  elif(wrong == 26):
-    system("cls")
-    print("\n+---+")
-    print(" O   |")
-    print("/|\  |")
-    print("/ \  |")
-    print("    ===")
-  elif(wrong == 27):
-    system("cls")
-    print("\n+---+")
-    print(" O   |")
-    print("/|\  |")
-    print("/ \  |")
-    print("    ===")
 # Ja ujzminēja 
 def printWord(guessedLetters):
   counter = 0
@@ -242,7 +130,7 @@ current_guess_index = 0
 current_letters_guessed = []
 current_letters_right = 0
 
-while(amount_of_times_wrong != 10 and current_letters_right != length_of_word_to_guess):
+while(amount_of_times_wrong != 11 and current_letters_right != length_of_word_to_guess):
   print("\nTik tālu uzminētie burti: ")
   for letter in current_letters_guessed:
     print(letter, end=" ")
@@ -265,26 +153,5 @@ while(amount_of_times_wrong != 10 and current_letters_right != length_of_word_to
     current_letters_right = printWord(current_letters_guessed)
     printLines()
 # Programma analīzē
-if amount_of_times_wrong == 27:
-   print("""
-    ▓██   ██▓ ▒█████   █    ██     ██▓     ▒█████    ██████ ▄▄▄█████▓ ▐██▌ 
-     ▒██  ██▒▒██▒  ██▒ ██  ▓██▒   ▓██▒    ▒██▒  ██▒▒██    ▒ ▓  ██▒ ▓▒ ▐██▌ 
-      ▒██ ██░▒██░  ██▒▓██  ▒██░   ▒██░    ▒██░  ██▒░ ▓██▄   ▒ ▓██░ ▒░ ▐██▌ 
-      ░ ▐██▓░▒██   ██░▓▓█  ░██░   ▒██░    ▒██   ██░  ▒   ██▒░ ▓██▓ ░  ▓██▒ 
-      ░ ██▒▓░░ ████▓▒░▒▒█████▓    ░██████▒░ ████▓▒░▒██████▒▒  ▒██▒ ░  ▒▄▄  
-       ██▒▒▒ ░ ▒░▒░▒░ ░▒▓▒ ▒ ▒    ░ ▒░▓  ░░ ▒░▒░▒░ ▒ ▒▓▒ ▒ ░  ▒ ░░    ░▀▀▒ 
-     ▓██ ░▒░   ░ ▒ ▒░ ░░▒░ ░ ░    ░ ░ ▒  ░  ░ ▒ ▒░ ░ ░▒  ░ ░    ░     ░  ░ 
-     ▒ ▒ ░░  ░ ░ ░ ▒   ░░░ ░ ░      ░ ░   ░ ░ ░ ▒  ░  ░  ░    ░          ░ 
-     ░ ░         ░ ░     ░            ░  ░    ░ ░        ░            ░    
-     ░ ░                                                                   """)
-
-   print("Vards bija - ", randomWord)
-else:
-  print("""
-   __   __  _______  __   __    _     _  ___   __    _  __  
-  |  | |  ||       ||  | |  |  | | _ | ||   | |  |  | ||  | 
-  |  |_|  ||   _   ||  | |  |  | || || ||   | |   |_| ||  | 
-  |       ||  | |  ||  |_|  |  |       ||   | |       ||  | 
-  |_     _||  |_|  ||       |  |       ||   | |  _    ||__| 
-    |   |  |       ||       |  |   _   ||   | | | |   | __  
-    |___|  |_______||_______|  |__| |__||___| |_|  |__||__| """)
+if amount_of_times_wrong >= 11:
+  print('Vārds bija', randomWord)
