@@ -10,6 +10,7 @@ print("Sveicinam jūs spēlē HangMan")
 print("Rakstiet pa vienu burtu, lai uzminētu vārdu, visi vārdi ir angļu valodā")
 print("------------------------------------------------------------------------")
 
+
 # vārdu bibliotēka
 wordDictionary = ["four", "house", "flower", "latvia", "python", "hello", "music", "heart", "rvt", "riga", "potato", "apple", "android", "windows", "linux", "computer"]
 
@@ -28,7 +29,6 @@ def print_hangman(wrong):
     print()
     print()
     print("   ===")
-
   elif(wrong == 1):
     system("cls")
     print()
